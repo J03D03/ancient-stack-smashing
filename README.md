@@ -1,4 +1,4 @@
-# Ancient 📜 Stack Smashing 💥🔨
+# Smashing 💥🔨 Ancient 📜 Stacks
 This repository contains stack smashing challenges targeting binaries secured with [StackGuard](https://www.usenix.org/legacy/publications/library/proceedings/sec98/full_papers/cowan/cowan.pdf) a compiler technique introduced in 1998.
 
 ---
