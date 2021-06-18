@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 void reveal_secret() { printf("reveal_secret was executed\n"); }
 
 void what_could_go_wrong() {
   char buffer[80];
+  printf("Provide your input:\n");
   scanf("%[^\t]", buffer);
 }
 
